@@ -17,8 +17,13 @@
     else root.removeAttribute("data-theme");
   }
 
-  const stored = localStorage.getItem(THEME_KEY);
-  if (stored) applyTheme(stored);
+const stored = localStorage.getItem(THEME_KEY);
+
+if (stored) {
+    applyTheme(stored);
+} else {
+    applyTheme("light");
+}
 
   const toggleBtn = document.querySelector("[data-theme-toggle]");
   if (toggleBtn) {
