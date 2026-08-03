@@ -1,0 +1,1 @@
+const BLOG_BASE = "./";
