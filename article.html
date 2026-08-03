@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>文章 · 初源博文</title>
+<link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="index.html" class="brand">
+    <img class="logo" src="assets/icon.png" alt="logo">
+    初源博文
+    <span class="sub">/ SEEKING THE TRUTH</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">首页</a>
+    <a href="about.html">关于</a>
+    <button class="theme-toggle" data-theme-toggle>☼</button>
+  </div>
+</nav>
+
+<main class="wrap">
+  <header class="article-head">
+    <a class="back-link" href="index.html">← 返回文章列表</a>
+    <div class="cat" id="cat"></div>
+    <h1 class="display-1" id="title">加载中...</h1>
+    <div class="article-meta" id="meta"></div>
+  </header>
+  <div class="article-body" id="content"></div>
+</main>
+
+<footer>
+  <div class="foot-grid">
+    <span class="copyright">© 2026 瓜子920 · 初源博文</span>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="assets/main.js"></script>
+<script>
+  // ====== 请在这里配置您的仓库信息 ======
+  const BASE = "./posts/";
+  // ====================================
+
+  (async () => {
+    try {
+      const id = new URLSearchParams(location.search).get('post');
+      if (!id) throw new Error('缺少 post 参数');
+
+      console.log('请求基础路径:', BASE);
+
+      // 加载文章列表
+      const postsRes = await fetch(`${BASE}posts.json`);
+      if (!postsRes.ok) throw new Error(`posts.json 加载失败 (HTTP ${postsRes.status})`);
+      const posts = await postsRes.json();
+
+      const p = posts.find(x => x.file === id);
+      if (!p) throw new Error(`未找到文章: ${id}`);
+
+      document.title = p.title;
+      document.getElementById('cat').textContent = `${p.category || ''} · ${p.log || ''}`;
+      document.getElementById('title').textContent = p.title;
+      document.getElementById('meta').textContent = `${p.date || ''}  ${p.time || ''}`;
+
+      // 加载 Markdown
+      const mdRes = await fetch(`${BASE}${id}.md`);
+      if (!mdRes.ok) throw new Error(`.md 文件加载失败 (HTTP ${mdRes.status})`);
+      const md = await mdRes.text();
+
+      if (typeof marked === 'undefined') throw new Error('marked 库未加载，请检查网络');
+      document.getElementById('content').innerHTML = marked.parse(md);
+
+    } catch (e) {
+      console.error('❌ 文章加载失败，详细信息如下：');
+      console.error('错误类型:', e.name);
+      console.error('错误消息:', e.message);
+      console.error('完整错误对象:', e);
+      document.getElementById('title').textContent = '文章加载失败';
+      document.getElementById('content').innerHTML = `<p style="color: var(--text-muted);">${e.message || '未知错误，请查看控制台'}</p>`;
+    }
+  })();
+</script>
+</body>
+</html>
