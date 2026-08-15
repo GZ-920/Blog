@@ -1,0 +1,36 @@
+[
+  {
+    "file": "welcome",
+    "cat": "essay",
+    "category": "随笔",
+    "log": "HELLO",
+    "title": "(ChatGPT生成）新版博客已就绪",
+    "desc": "这是一篇可以直接删除的示例文章，用来确认文章列表、Markdown、目录、点赞、分享与评论区域都能正常工作。",
+    "date": "2026-08-15",
+    "time": "3 min",
+    "cover": "images/cover01.jpeg",
+    "featured": true,
+    "tags": [
+      "博客",
+      "Material You",
+      "Cloudflare"
+    ]
+  },
+  {
+    "file": "static-blog-stack",
+    "cat": "tech",
+    "category": "折腾一些小东西",
+    "log": "DEVLOG",
+    "title": "(ChatGPT生成）纯静态博客也可以很完整",
+    "desc": "不用传统服务器，也能把动态主题、GitHub 评论、文章后台、PWA 和可选的全站点赞组合到一起。",
+    "date": "2026-08-15",
+    "time": "5 min",
+    "cover": "",
+    "featured": false,
+    "tags": [
+      "静态站",
+      "GitHub",
+      "D1"
+    ]
+  }
+]
