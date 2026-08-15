@@ -1,2 +1,2 @@
-# Cloudflare Pages 自动提供 .html -> 无扩展名的 clean URLs。
-# 不要再为后台添加从 /admin 指向 admin.html 的 200 重写，否则可能形成循环。
+# Cloudflare Pages already serves *.html files at extensionless routes.
+# Do not proxy /admin -> /admin.html here, or it can conflict with Pages' canonical URL handling.
