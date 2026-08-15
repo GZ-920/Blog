@@ -1,0 +1,12 @@
+{
+  "name": "初源博文",
+  "short_name": "初源",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f8f5fb",
+  "theme_color": "#6750A4",
+  "lang": "zh-CN",
+  "icons": [
+    {"src":"assets/icon.png","sizes":"2048x2048","type":"image/png","purpose":"any maskable"}
+  ]
+}
