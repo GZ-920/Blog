@@ -4,13 +4,12 @@ import { renderMarkdown } from "./markdown.js";
 
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 let config={},posts=[],current=null,currentMd="",pendingBgFile=null,gh={owner:"",repo:"",branch:"main",token:""};
-
 function toast(msg,duration=2200){const el=$("[data-toast]");if(!el)return;el.textContent=msg;el.classList.add("show");clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove("show"),duration);}
 function download(name,text,type="text/plain"){const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([text],{type}));a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);}
 function deepGet(obj,path){return path.split(".").reduce((v,k)=>v?.[k],obj);}
 function deepSet(obj,path,value){const parts=path.split("."),last=parts.pop();let cur=obj;for(const p of parts)cur=cur[p]??={};cur[last]=value;}
 function clone(v){return JSON.parse(JSON.stringify(v));}
-
+function asList(value){if(Array.isArray(value))return value.map(x=>String(x).trim()).filter(Boolean);if(value==null)return[];return String(value).split(/[,，\n]/).map(x=>x.trim()).filter(Boolean);}
 function bindTabs(){
   $$("[data-admin-tab]").forEach(btn=>btn.addEventListener("click",()=>{
     $$("[data-admin-tab]").forEach(x=>x.classList.toggle("is-active",x===btn));
@@ -18,7 +17,7 @@ function bindTabs(){
   }));
 }
 function populateConfig(){
-  $$("#config-form [name]").forEach(el=>{const v=deepGet(config,el.name);if(el.type==="checkbox")el.checked=!!v;else if(v!=null)el.value=v;});
+  $$("#config-form [name]").forEach(el=>{const v=deepGet(config,el.name);if(el.type==="checkbox")el.checked=!!v;else if(Array.isArray(v))el.value=v.join(", ");else if(v!=null)el.value=v;});
   const c=config.comments||{};$("[data-giscus-enabled]").checked=!!c.enabled;$("[data-giscus-repo]").value=c.repo||"";$("[data-giscus-repo-id]").value=c.repoId||"";$("[data-giscus-category]").value=c.category||"";$("[data-giscus-category-id]").value=c.categoryId||"";
   gh.owner=config.admin?.githubOwner||"";gh.repo=config.admin?.githubRepo||"";gh.branch=config.admin?.githubBranch||"main";
   $("[data-gh-owner]").value=gh.owner;$("[data-gh-repo]").value=gh.repo;$("[data-gh-branch]").value=gh.branch;
@@ -26,7 +25,7 @@ function populateConfig(){
 }
 function collectConfig(){
   const out=clone(config);
-  $$("#config-form [name]").forEach(el=>{let v=el.type==="checkbox"?el.checked:el.value;if(el.type==="number")v=Number(v);deepSet(out,el.name,v);});
+  $$("#config-form [name]").forEach(el=>{let v=el.type==="checkbox"?el.checked:el.value;if(el.type==="number")v=Number(v);if(el.name==="home.chips")v=asList(v);deepSet(out,el.name,v);});
   out.comments={...(out.comments||{}),enabled:$("[data-giscus-enabled]").checked,repo:$("[data-giscus-repo]").value.trim(),repoId:$("[data-giscus-repo-id]").value.trim(),category:$("[data-giscus-category]").value.trim(),categoryId:$("[data-giscus-category-id]").value.trim()};
   out.admin={...(out.admin||{}),githubOwner:$("[data-gh-owner]").value.trim(),githubRepo:$("[data-gh-repo]").value.trim(),githubBranch:$("[data-gh-branch]").value.trim()||"main"};
   return out;
@@ -38,12 +37,11 @@ function bindConfig(){
   $("[data-download-config]").onclick=()=>{config=collectConfig();download("site.config.json",JSON.stringify(config,null,2),"application/json");};
   const file=$("#background-file");file.onchange=()=>{pendingBgFile=file.files?.[0]||null;if(!pendingBgFile)return;const img=$("[data-bg-preview]");img.src=URL.createObjectURL(pendingBgFile);img.hidden=false;$("[data-upload-background]").disabled=!gh.token;previewConfig();};
 }
-
-async function loadPosts(){const r=await fetch(`posts/posts.json?t=${Date.now()}`,{cache:"no-store"});if(!r.ok)throw new Error(`posts.json HTTP ${r.status}`);posts=await r.json();renderPostList();if(posts[0])await openPost(posts[0].file);}
+async function loadPosts(){const r=await fetch(`posts/posts.json?t=${Date.now()}`,{cache:"no-store"});if(!r.ok)throw new Error(`posts.json HTTP ${r.status}`);const data=await r.json();posts=Array.isArray(data)?data:[];renderPostList();if(posts[0])await openPost(posts[0].file);}
 function renderPostList(){const box=$("[data-admin-post-list]");box.innerHTML=posts.map(p=>`<button data-open-post="${escapeHtml(p.file)}" class="${current?.file===p.file?"is-active":""}"><strong>${escapeHtml(p.title||p.file)}</strong><br><small>${escapeHtml(p.date||"")} · ${escapeHtml(p.category||p.cat||"")}</small></button>`).join("");box.querySelectorAll("[data-open-post]").forEach(b=>b.onclick=()=>openPost(b.dataset.openPost));}
 async function openPost(file){current=clone(posts.find(p=>p.file===file)||{});const r=await fetch(`posts/${encodeURIComponent(file)}.md?t=${Date.now()}`,{cache:"no-store"});currentMd=r.ok?await r.text():`# ${current.title||"新文章"}\n`;fillEditor();renderPostList();}
-function fillEditor(){if(!current)return;$("[data-editor-heading]").textContent=current.title||"新文章";$("[data-post-file]").value=current.file||"";$("[data-post-cat]").value=current.cat||"essay";$("[data-post-title]").value=current.title||"";$("[data-post-desc]").value=current.desc||"";$("[data-post-category]").value=current.category||"";$("[data-post-date]").value=current.date||new Date().toISOString().slice(0,10);$("[data-post-time]").value=current.time||"5 min";$("[data-post-cover]").value=current.cover||"";$("[data-post-featured]").checked=!!current.featured;$("[data-post-tags]").value=(current.tags||[]).join(", ");$("[data-markdown]").value=currentMd;renderPreview();}
-function collectPost(){return{file:$("[data-post-file]").value.trim(),cat:$("[data-post-cat]").value,category:$("[data-post-category]").value.trim(),log:current?.log||"POST",title:$("[data-post-title]").value.trim(),desc:$("[data-post-desc]").value.trim(),date:$("[data-post-date]").value,time:$("[data-post-time]").value.trim(),cover:$("[data-post-cover]").value.trim(),featured:$("[data-post-featured]").checked,tags:$("[data-post-tags]").value.split(/[,，]/).map(x=>x.trim()).filter(Boolean)};}
+function fillEditor(){if(!current)return;$("[data-editor-heading]").textContent=current.title||"新文章";$("[data-post-file]").value=current.file||"";$("[data-post-cat]").value=current.cat||"essay";$("[data-post-title]").value=current.title||"";$("[data-post-desc]").value=current.desc||"";$("[data-post-category]").value=current.category||"";$("[data-post-date]").value=current.date||new Date().toISOString().slice(0,10);$("[data-post-time]").value=current.time||"5 min";$("[data-post-cover]").value=current.cover||"";$("[data-post-featured]").checked=!!current.featured;$("[data-post-tags]").value=asList(current.tags).join(", ");$("[data-markdown]").value=currentMd;renderPreview();}
+function collectPost(){return{file:$("[data-post-file]").value.trim(),cat:$("[data-post-cat]").value,category:$("[data-post-category]").value.trim(),log:current?.log||"POST",title:$("[data-post-title]").value.trim(),desc:$("[data-post-desc]").value.trim(),date:$("[data-post-date]").value,time:$("[data-post-time]").value.trim(),cover:$("[data-post-cover]").value.trim(),featured:$("[data-post-featured]").checked,tags:asList($("[data-post-tags]").value)};}
 function renderPreview(){const md=$("[data-markdown]").value;$("[data-markdown-preview]").innerHTML=renderMarkdown(md).html;}
 function saveSession(){const p=collectPost();if(!p.file||!p.title){toast("请填写文件名和标题");return false;}current=p;currentMd=$("[data-markdown]").value;const i=posts.findIndex(x=>x.file===p.file);if(i>=0)posts[i]=clone(p);else posts.unshift(clone(p));renderPostList();$("[data-save-state]").textContent="已保存到当前编辑会话";toast("已保存");return true;}
 function bindPosts(){
@@ -53,7 +51,6 @@ function bindPosts(){
   $("[data-download-post]").onclick=()=>{if(saveSession())download(`${current.file}.md`,currentMd,"text/markdown");};
   $("[data-download-posts-json]").onclick=()=>{saveSession();download("posts.json",JSON.stringify(posts,null,2),"application/json");};
 }
-
 function readGh(){gh={owner:$("[data-gh-owner]").value.trim(),repo:$("[data-gh-repo]").value.trim(),branch:$("[data-gh-branch]").value.trim()||"main",token:$("[data-gh-token]").value.trim()};return gh;}
 function api(path){const g=readGh();return `https://api.github.com/repos/${encodeURIComponent(g.owner)}/${encodeURIComponent(g.repo)}/contents/${path.split("/").map(encodeURIComponent).join("/")}`;}
 function authHeaders(){return{Accept:"application/vnd.github+json",Authorization:`Bearer ${gh.token}`,"X-GitHub-Api-Version":"2022-11-28"};}
@@ -74,7 +71,5 @@ function bindGithub(){
   $("[data-push-post]").onclick=async()=>{try{if(!saveSession())return;await githubWrite(`posts/${current.file}.md`,currentMd,`Update post: ${current.title}`);await githubWrite("posts/posts.json",JSON.stringify(posts,null,2),"Update posts index");toast("文章已提交");}catch(e){toast(e.message,9000);}};
   $("[data-upload-background]").onclick=async()=>{if(!pendingBgFile)return;try{const ext=(pendingBgFile.name.split(".").pop()||"jpg").toLowerCase();const path=`images/background.${ext}`;await githubWriteBinary(path,pendingBgFile,"Update blog background");$("[name='theme.background.image']").value=path;config=collectConfig();await githubWrite("assets/site.config.json",JSON.stringify(config,null,2),"Update background config");toast("背景已上传并更新配置");}catch(e){toast(e.message,9000);}};
 }
-
 async function runDiagnostics(){const box=$("[data-diagnostics]");box.innerHTML="";const checks=[];const probe=async(label,url)=>{try{const r=await fetch(`${url}${url.includes("?")?"&":"?"}t=${Date.now()}`,{cache:"no-store"});checks.push([label,r.ok,`HTTP ${r.status}`]);}catch(e){checks.push([label,false,e.message]);}};await probe("站点配置","assets/site.config.json");await probe("文章索引","posts/posts.json");if(config.theme?.background?.image)await probe("背景图片",config.theme.background.image);const comments=config.comments?.enabled?!!(config.comments.repo&&config.comments.repoId&&config.comments.category&&config.comments.categoryId):true;checks.push(["Giscus 配置",comments,config.comments?.enabled?"已启用":"未启用（可选）"]);try{const r=await fetch(`/api/likes?post=healthcheck&client=00000000-0000-4000-8000-000000000000`);checks.push(["全站点赞 API",r.ok,r.ok?"可用":`HTTP ${r.status}（可选）`]);}catch{checks.push(["全站点赞 API",false,"不可用（可选）"]);}checks.push(["动态配色",true,document.documentElement.dataset.colorEngine||"fallback"]);box.innerHTML=checks.map(([label,ok,detail])=>`<div class="diagnostic-item ${ok?"ok":"bad"}"><strong>${escapeHtml(label)}</strong><span>${escapeHtml(detail)}</span></div>`).join("");}
-
-(async()=>{try{config=await loadConfig(true);await bootCommon(config);bindTabs();populateConfig();bindConfig();bindPosts();bindGithub();await loadPosts();$("[data-run-diagnostics]").onclick=runDiagnostics;}catch(e){console.error(e);toast(e.message);}})();
+(async()=>{try{config=await loadConfig(true);await bootCommon(config);bindTabs();populateConfig();bindConfig();bindPosts();bindGithub();await loadPosts();$("[data-run-diagnostics]").onclick=runDiagnostics;}catch(e){console.error(e);toast(e.message,9000);}})();
