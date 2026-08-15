@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#6750A4" />
+  <meta name="description" content="初源博文 · 瓜子920的个人博客" />
+  <title>初源博文 · 瓜子920</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body data-page="home">
+  <div class="background-layer" aria-hidden="true"></div>
+  <nav class="site-nav" data-nav>
+    <a href="index.html" class="brand" aria-label="返回首页">
+      <img class="logo" src="assets/icon.png" alt="" />
+      <span><strong data-site-name>初源博文</strong><small data-site-tagline>SEEKING THE TRUTH</small></span>
+    </a>
+    <div class="nav-actions">
+      <a class="nav-link is-active" href="index.html">首页</a>
+      <a class="nav-link" href="about.html">关于</a>
+      <a class="icon-button admin-link" href="admin.html" title="管理工具" aria-label="管理工具">⚙</a>
+      <button class="icon-button" data-theme-toggle aria-label="切换主题" title="切换主题"><span data-theme-icon>◐</span></button>
+    </div>
+  </nav>
+
+  <header class="hero wrap">
+    <div class="hero-copy glass-panel" data-reveal>
+      <p class="eyebrow" data-home-eyebrow>个人博客</p>
+      <h1 class="display-1" data-home-title>初韵绘明熙，<br />求真映本源。</h1>
+      <p class="lede" data-home-intro></p>
+      <div class="chip-row" data-home-chips></div>
+      <div class="hero-actions">
+        <a class="filled-button" href="#articles">浏览文章</a>
+        <a class="tonal-button" href="about.html">了解我</a>
+      </div>
+    </div>
+    <aside class="hero-side glass-panel" data-reveal>
+      <span class="hero-kicker">Material You</span>
+      <h2>颜色来自你的背景。</h2>
+      <p>主题会从背景图片提取主色，并自动生成浅色 / 深色 Material 3 配色。</p>
+      <div class="palette-preview" aria-label="当前动态配色">
+        <span class="p-primary"></span><span class="p-secondary"></span><span class="p-tertiary"></span><span class="p-surface"></span>
+      </div>
+    </aside>
+  </header>
+
+  <main class="wrap" id="articles">
+    <section class="section-block">
+      <div class="section-heading">
+        <div><p class="eyebrow">文章</p><h2 class="title-1">最近写下的内容</h2></div>
+        <span class="article-count" data-post-count>—</span>
+      </div>
+
+      <div class="toolbar glass-panel">
+        <label class="search-box" data-search-wrap>
+          <span aria-hidden="true">⌕</span>
+          <input id="post-search" type="search" placeholder="搜索标题、摘要、标签…" autocomplete="off" />
+          <kbd>/</kbd>
+        </label>
+        <div class="segmented" data-category-tabs role="tablist" aria-label="文章分类"></div>
+      </div>
+
+      <div class="post-grid" id="post-container" aria-live="polite">
+        <div class="skeleton-card"></div><div class="skeleton-card"></div><div class="skeleton-card"></div>
+      </div>
+      <div class="empty-state" data-empty hidden>
+        <strong>没有找到匹配的文章</strong>
+        <p>换个关键词或分类试试。</p>
+      </div>
+    </section>
+  </main>
+
+  <button class="fab" data-back-to-top hidden aria-label="返回顶部">↑</button>
+
+  <footer class="site-footer">
+    <div class="wrap foot-grid">
+      <span class="copyright" data-copyright></span>
+      <div class="foot-links" data-social-links></div>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/main.js"></script>
+</body>
+</html>
