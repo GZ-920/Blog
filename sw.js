@@ -1,4 +1,4 @@
-const CACHE='chuyuan-blog-v3';
+const CACHE='chuyuan-blog-v4';
 const CORE=['./','./index.html','./about.html','./article.html','./assets/style.css','./assets/main.js','./assets/article.js','./assets/shared.js','./assets/theme-engine.js','./assets/markdown.js','./assets/site.config.json','./assets/icon.png','./posts/posts.json'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE)).then(()=>self.skipWaiting())));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
