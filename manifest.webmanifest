@@ -3,10 +3,8 @@
   "short_name": "初源",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#f8f5fb",
-  "theme_color": "#6750A4",
+  "background_color": "#fffbfe",
+  "theme_color": "#fffbfe",
   "lang": "zh-CN",
-  "icons": [
-    {"src":"assets/icon.png","sizes":"2048x2048","type":"image/png","purpose":"any maskable"}
-  ]
+  "icons": [{"src":"assets/icon.png","sizes":"2048x2048","type":"image/png","purpose":"any maskable"}]
 }
