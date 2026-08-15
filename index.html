@@ -20,17 +20,19 @@
     <div class="nav-actions">
       <a class="nav-link is-active" href="index.html">首页</a>
       <a class="nav-link" href="about.html">关于</a>
-      <a class="icon-button admin-link" href="admin.html" title="管理工具" aria-label="管理工具">⚙</a>
+      <a class="icon-button admin-link" href="/admin" title="管理工具" aria-label="管理工具">⚙</a>
       <button class="icon-button" data-theme-toggle aria-label="切换主题" title="切换主题"><span data-theme-icon>◐</span></button>
     </div>
   </nav>
 
-  <div class="home-notice-shell wrap" data-home-notice hidden>
-    <div class="home-notice glass-panel" role="status">
-      <span class="home-notice-icon" aria-hidden="true">●</span>
-      <p data-home-notice-text></p>
-      <a class="home-notice-link" data-home-notice-link hidden></a>
-      <button class="home-notice-close" type="button" data-home-notice-close hidden aria-label="关闭通知">×</button>
+  <div class="home-notice-wrap wrap" data-home-notice-wrap hidden>
+    <div class="home-notice glass-panel" role="status" aria-live="polite">
+      <span class="home-notice-mark" aria-hidden="true">✦</span>
+      <div class="home-notice-content">
+        <span data-home-notice-text></span>
+        <a class="home-notice-link" data-home-notice-link hidden></a>
+      </div>
+      <button class="home-notice-close icon-button" type="button" data-home-notice-close aria-label="关闭通知" title="关闭通知" hidden>×</button>
     </div>
   </div>
 
