@@ -18,11 +18,11 @@
   "theme": {
     "defaultMode": "light",
     "dynamicColor": true,
-    "seedColor": "#6750a4",
+    "seedColor": "#3a6cd0",
     "source": "background",
     "background": {
       "enabled": true,
-      "image": "images/cover01.jpeg",
+      "image": "images/background.jpeg",
       "position": "center center",
       "size": "cover",
       "blur": 18,
