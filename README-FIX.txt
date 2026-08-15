@@ -1,19 +1,15 @@
-本补丁包含两项功能修改：
+后台重定向循环修复
 
-1. 主页文章头图/封面取消固定长宽比
-- 图片宽度自适应卡片
-- 高度按原图自然比例计算
-- 不再强制裁切为固定比例
+覆盖仓库根目录中的以下文件：
+_redirects
+_headers
+sw.js
+assets/shared.js
 
-2. 新增主页横幅通知
-Admin -> 站点与外观中新增：
-- 启用主页横幅通知
-- 允许访客关闭通知
-- 横幅通知内容
-- 通知链接文字
-- 通知链接 URL
+部署完成后直接访问：
+https://你的域名/admin
 
-配置写入 assets/site.config.json 的 home.notice。
-访客关闭通知后，本次浏览器会话内不再重复显示；修改通知文字或 URL 后会视为新通知。
+不要再在 _redirects 中添加：
+/admin /admin.html 200
 
-同时将 Service Worker 缓存升级到 v4，避免部署后继续读取旧首页/CSS/JS。
+Cloudflare Pages 会自动把 admin.html 映射到 /admin。
