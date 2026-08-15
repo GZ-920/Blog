@@ -1,2 +1,0 @@
-# Cloudflare Pages already serves *.html files at extensionless routes.
-# Do not proxy /admin -> /admin.html here, or it can conflict with Pages' canonical URL handling.
