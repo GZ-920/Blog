@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#6750A4" />
+  <meta name="description" content="初源博文文章" />
+  <title>文章 · 初源博文</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body data-page="article">
+  <div class="background-layer" aria-hidden="true"></div>
+  <div class="reading-progress" data-reading-progress></div>
+  <nav class="site-nav" data-nav>
+    <a href="index.html" class="brand"><img class="logo" src="assets/icon.png" alt="" /><span><strong data-site-name>初源博文</strong><small data-site-tagline>SEEKING THE TRUTH</small></span></a>
+    <div class="nav-actions">
+      <a class="nav-link" href="index.html">首页</a>
+      <a class="nav-link" href="about.html">关于</a>
+      <button class="icon-button" data-theme-toggle aria-label="切换主题"><span data-theme-icon>◐</span></button>
+    </div>
+  </nav>
+
+  <main class="article-layout wrap">
+    <article class="article-shell glass-panel">
+      <header class="article-head">
+        <a class="back-link" href="index.html">← 返回文章列表</a>
+        <div class="article-kicker"><span class="cat-badge" id="cat">加载中</span><span id="log"></span></div>
+        <h1 class="display-2" id="title">正在加载文章…</h1>
+        <p class="article-desc" id="desc"></p>
+        <div class="article-meta" id="meta"></div>
+        <img class="article-cover" id="article-cover" alt="" hidden />
+      </header>
+      <div class="article-body" id="content"></div>
+      <div class="article-actions" id="article-actions" hidden>
+        <button class="like-button" data-like-button><span data-like-icon>♡</span><span>喜欢</span><b data-like-count>0</b></button>
+        <button class="tonal-button compact" data-share-button>分享</button>
+      </div>
+      <nav class="post-nav" data-post-nav></nav>
+      <section class="comments-section" data-comments-section>
+        <div class="section-heading compact-heading"><div><p class="eyebrow">讨论</p><h2 class="title-2">评论</h2></div></div>
+        <div data-comments></div>
+      </section>
+    </article>
+
+    <aside class="article-aside">
+      <div class="toc-card glass-panel" data-toc-card hidden>
+        <span class="aside-label">目录</span>
+        <nav class="toc" data-toc></nav>
+      </div>
+    </aside>
+  </main>
+
+  <button class="fab" data-back-to-top hidden aria-label="返回顶部">↑</button>
+  <footer class="site-footer"><div class="wrap foot-grid"><span class="copyright" data-copyright></span><div class="foot-links" data-social-links></div></div></footer>
+
+  <script type="module" src="assets/article.js"></script>
+</body>
+</html>
