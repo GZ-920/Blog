@@ -55,11 +55,35 @@
       "interval": 3000,
       "images": [
         "images/background.jpeg",
-        "images/cover01.jpeg"
+        "images/cover01.jpeg",
+        "images/head01.jpeg",
+        "images/head02.jpeg",
+        "images/head03.jpeg",
+        "images/head04.jpeg",
+        "images/head05.jpeg",
+        "images/head06.jpeg",
+        "images/head07.jpeg",
+        "images/head08.jpeg",
+        "images/head09.jpeg",
+        "images/head10.jpeg",
+        "images/head11.jpeg",
+        "images/head12.jpeg"
       ],
       "colors": {
         "images/background.jpeg": "#859583",
-        "images/cover01.jpeg": "#958EA6"
+        "images/cover01.jpeg": "#958EA6",
+        "images/head01.jpeg": "#9792A6",
+        "images/head02.jpeg": "#5994BE",
+        "images/head03.jpeg": "#9678A1",
+        "images/head04.jpeg": "#7C9A79",
+        "images/head05.jpeg": "#9AB2B0",
+        "images/head06.jpeg": "#A46DAA",
+        "images/head07.jpeg": "#DCB1C9",
+        "images/head08.jpeg": "#95C7C7",
+        "images/head09.jpeg": "#958EA6",
+        "images/head10.jpeg": "#C7C1D5",
+        "images/head11.jpeg": "#A1CADF",
+        "images/head12.jpeg": "#6281A9"
       }
     }
   },
