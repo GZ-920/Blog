@@ -56,7 +56,11 @@
       "images": [
         "images/background.jpeg",
         "images/cover01.jpeg"
-      ]
+      ],
+      "colors": {
+        "images/background.jpeg": "#859583",
+        "images/cover01.jpeg": "#958EA6"
+      }
     }
   },
   "features": {
