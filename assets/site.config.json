@@ -55,12 +55,56 @@
       "interval": 3000,
       "images": [
         {
-          "src": "images/background.jpeg",
-          "color": "#c0a089"
+          "src": "images/head01.jpeg",
+          "color": "#9892a5"
         },
         {
-          "src": "images/cover01.jpeg",
-          "color": "#c0a089"
+          "src": "images/head02.jpeg",
+          "color": "#6591b4"
+        },
+        {
+          "src": "images/head03.jpeg",
+          "color": "#947ea5"
+        },
+        {
+          "src": "images/head04.jpeg",
+          "color": "#829c7f"
+        },
+        {
+          "src": "images/head05.jpeg",
+          "color": "#9fb4b2"
+        },
+        {
+          "src": "images/head06.jpeg",
+          "color": "#899889"
+        },
+        {
+          "src": "images/head07.jpeg",
+          "color": "#a982b3"
+        },
+        {
+          "src": "images/head08.jpeg",
+          "color": "#e6ccdc"
+        },
+        {
+          "src": "images/head09.jpeg",
+          "color": "#97c5c5"
+        },
+        {
+          "src": "images/head10.jpeg",
+          "color": "#9c98ac"
+        },
+        {
+          "src": "images/head11.jpeg",
+          "color": "#cdc7d8"
+        },
+        {
+          "src": "images/head12.png",
+          "color": "#a9cde0"
+        },
+        {
+          "src": "images/head13.png",
+          "color": "#6e86a8"
         }
       ]
     }
