@@ -73,12 +73,12 @@
     "endpoint": "/api/likes"
   },
   "comments": {
-    "enabled": false,
+    "enabled": true,
     "provider": "giscus",
     "repo": "GZ-920/Blog",
-    "repoId": "",
+    "repoId": "R_kgDOTsJudA",
     "category": "Announcements",
-    "categoryId": "",
+    "categoryId": "DIC_kwDOTsJudM4DDc9N",
     "mapping": "specific",
     "reactionsEnabled": "1",
     "emitMetadata": "0",
@@ -100,6 +100,6 @@
     "githubOwner": "GZ-920",
     "githubRepo": "Blog",
     "githubBranch": "main",
-    "password": ""
+    "password": "0786"
   }
 }
