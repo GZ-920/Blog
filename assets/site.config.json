@@ -54,12 +54,14 @@
       "autoplay": true,
       "interval": 3000,
       "images": [
+        "images/cover01.jpeg",
         "images/background.jpeg",
-        "images/cover01.jpeg"
+        "images/head01.jpeg"
       ],
       "colors": {
+        "images/cover01.jpeg": "#9791a9",
         "images/background.jpeg": "#889786",
-        "images/cover01.jpeg": "#9791A9"
+        "images/head01.jpeg": "#9890a4"
       }
     }
   },
