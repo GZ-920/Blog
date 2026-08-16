@@ -56,12 +56,16 @@
       "images": [
         "images/cover01.jpeg",
         "images/background.jpeg",
-        "images/head01.jpeg"
+        "images/head02.jpeg",
+        "images/head01.jpeg",
+        "images/head05.jpeg"
       ],
       "colors": {
         "images/cover01.jpeg": "#9791a9",
         "images/background.jpeg": "#889786",
-        "images/head01.jpeg": "#9890a4"
+        "images/head02.jpeg": "#5792be",
+        "images/head01.jpeg": "#9890a4",
+        "images/head05.jpeg": "#95adab"
       }
     }
   },
