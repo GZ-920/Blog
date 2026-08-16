@@ -27,9 +27,9 @@
     "enabled": true,
     "variant": "danger",
     "showClose": false,
-    "label": "公告qqqqq",
-    "title": "欢迎访问初源博文",
-    "message": "感谢你的到来。这里会陆续分享创作、技术折腾与日常思考，欢迎在评论区交流。",
+    "label": "公告",
+    "title": "维护公告",
+    "message": "维护中，请稍后",
     "link": "",
     "linkLabel": "了解更多"
   },
