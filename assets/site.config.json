@@ -55,8 +55,8 @@
       "interval": 3000,
       "images": [
         {
-          "src": "images/head01.jpeg",
-          "color": "#9892a5"
+          "src": "images/head01.png",
+          "color": "#6e86a8"
         },
         {
           "src": "images/head02.jpeg",
@@ -64,47 +64,47 @@
         },
         {
           "src": "images/head03.jpeg",
-          "color": "#947ea5"
+          "color": "#819c7f"
         },
         {
           "src": "images/head04.jpeg",
-          "color": "#829c7f"
+          "color": "#899789"
         },
         {
           "src": "images/head05.jpeg",
-          "color": "#9fb4b2"
+          "color": "#e5ccdc"
         },
         {
           "src": "images/head06.jpeg",
-          "color": "#899889"
+          "color": "#9c98ab"
         },
         {
           "src": "images/head07.jpeg",
-          "color": "#a982b3"
+          "color": "#9992a5"
         },
         {
-          "src": "images/head08.jpeg",
-          "color": "#e6ccdc"
-        },
-        {
-          "src": "images/head09.jpeg",
-          "color": "#97c5c5"
-        },
-        {
-          "src": "images/head10.jpeg",
-          "color": "#9c98ac"
-        },
-        {
-          "src": "images/head11.jpeg",
-          "color": "#cdc7d8"
-        },
-        {
-          "src": "images/head12.png",
+          "src": "images/head08.png",
           "color": "#a9cde0"
         },
         {
-          "src": "images/head13.png",
-          "color": "#6e86a8"
+          "src": "images/head09.jpeg",
+          "color": "#937ea5"
+        },
+        {
+          "src": "images/head10.jpeg",
+          "color": "#9fb4b2"
+        },
+        {
+          "src": "images/head11.jpeg",
+          "color": "#a982b3"
+        },
+        {
+          "src": "images/head12.jpeg",
+          "color": "#98c5c5"
+        },
+        {
+          "src": "images/head13.jpeg",
+          "color": "#cdc7d7"
         }
       ]
     }
