@@ -25,11 +25,11 @@
   },
   "banner": {
     "enabled": true,
-    "variant": "danger",
-    "showClose": false,
-    "label": "公告qqqqq",
-    "title": "欢迎访问初源博文",
-    "message": "感谢你的到来。这里会陆续分享创作、技术折腾与日常思考，欢迎在评论区交流。",
+    "variant": "theme",
+    "showClose": true,
+    "label": "公告",
+    "title": "新版博客已上线！",
+    "message": "感谢你的到来。本网站采用优雅的Material You设计语言，使您沉浸于颜色之美。",
     "link": "",
     "linkLabel": "了解更多"
   },
