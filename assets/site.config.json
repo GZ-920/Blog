@@ -55,14 +55,6 @@
       "interval": 3000,
       "images": [
         {
-          "src": "images/background.jpeg",
-          "color": "#c0a089"
-        },
-        {
-          "src": "images/cover01.jpeg",
-          "color": "#c0a089"
-        },
-        {
           "src": "https://s41.ax1x.com/2026/08/17/pmjnd76.png",
           "color": "#c0a089"
         }
