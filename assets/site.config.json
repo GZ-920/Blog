@@ -1,0 +1,155 @@
+{
+  "site": {
+    "name": "初源博文",
+    "shortName": "初源",
+    "tagline": "SEEKING THE TRUTH",
+    "author": "瓜子920",
+    "description": "一个关于创作、技术折腾与日常思考的个人博客。",
+    "language": "zh-CN",
+    "copyright": "© 2026 瓜子920 · 初源博文",
+    "email": "chenxuanzhi2023@gmail.com"
+  },
+  "home": {
+    "eyebrow": "个人博客",
+    "title": "初韵绘明熙，\n求真映本源。",
+    "intro": "我是瓜子920，原创术力口「高精度中字嵌字」系列。我是一名高中生，这是我搭建的个人博客，会在这里分享一些动态、见解与随笔，感谢支持。",
+    "chips": [
+      "高精度中字嵌字",
+      "美术生",
+      "Alight Motion",
+      "AI",
+      "刷机",
+      "解锁",
+      "C++"
+    ]
+  },
+  "banner": {
+    "enabled": true,
+    "variant": "theme",
+    "showClose": true,
+    "label": "公告",
+    "title": "新版博客已上线！",
+    "message": "感谢你的到来。本网站采用优雅的Material You设计语言，使您沉浸于颜色之美。",
+    "link": "",
+    "linkLabel": "了解更多"
+  },
+  "theme": {
+    "defaultMode": "light",
+    "dynamicColor": true,
+    "seedColor": "#c0a089",
+    "source": "background",
+    "background": {
+      "enabled": true,
+      "image": "images/background.jpeg",
+      "position": "center center",
+      "size": "cover",
+      "blur": 18,
+      "opacityLight": 0.055,
+      "opacityDark": 0.07,
+      "overlayLight": 0.9,
+      "overlayDark": 0.9
+    },
+    "heroCarousel": {
+      "enabled": true,
+      "autoplay": true,
+      "interval": 3000,
+      "images": [
+        {
+          "src": "https://esaimg.cdn1.vip/i/6a82dd9edc7de_1786961310.webp",
+          "color": "#6e86a8"
+        },
+        {
+          "src": "https://esaimg.cdn1.vip/i/6a82dd4173f8f_1786961217.webp",
+          "color": "#6591b4"
+        },
+        {
+          "src": "https://esaimg.cdn1.vip/i/6a82dd978ca70_1786961303.webp",
+          "color": "#819c7f"
+        },
+        {
+          "src": "https://esaimg.cdn1.vip/i/6a82dd9973cdd_1786961305.webp",
+          "color": "#899789"
+        },
+        {
+          "src": "https://esaimg.cdn1.vip/i/6a82dd9ad6bfd_1786961306.webp",
+          "color": "#e5ccdc"
+        },
+        {
+          "src": "https://esaimg.cdn1.vip/i/6a82dda10c095_1786961313.webp",
+          "color": "#9992a5"
+        },
+        {
+          "src": "https://esaimg.cdn1.vip/i/6a82dda453150_1786961316.webp",
+          "color": "#a9cde0"
+        },
+        {
+          "src": "https://esaimg.cdn1.vip/i/6a82dda5ba255_1786961317.webp",
+          "color": "#937ea5"
+        },
+        {
+          "src": "https://esaimg.cdn1.vip/i/6a82ddaf2f72e_1786961327.webp",
+          "color": "#9fb4b2"
+        },
+        {
+          "src": "https://esaimg.cdn1.vip/i/6a82ddb08b1ef_1786961328.webp",
+          "color": "#a982b3"
+        },
+        {
+          "src": "https://esaimg.cdn1.vip/i/6a82ddb171941_1786961329.webp",
+          "color": "#98c5c5"
+        },
+        {
+          "src": "https://esaimg.cdn1.vip/i/6a82dea81a4bf_1786961576.webp",
+          "color": "#cdc7d7"
+        },
+        {
+          "src": "https://esaimg.cdn1.vip/i/6a82dda29459f_1786961314.webp",
+          "color": "#9c98ab"
+        }
+      ]
+    }
+  },
+  "features": {
+    "search": true,
+    "pwa": true,
+    "readingProgress": true,
+    "toc": true,
+    "share": true,
+    "backToTop": true
+  },
+  "likes": {
+    "enabled": true,
+    "mode": "auto",
+    "endpoint": "/api/likes"
+  },
+  "comments": {
+    "enabled": true,
+    "provider": "giscus",
+    "repo": "GZ-920/Blog",
+    "repoId": "R_kgDOTsJudA",
+    "category": "Announcements",
+    "categoryId": "DIC_kwDOTsJudM4DDc9N",
+    "mapping": "specific",
+    "reactionsEnabled": "1",
+    "emitMetadata": "0",
+    "inputPosition": "top",
+    "lang": "zh-CN",
+    "loading": "lazy"
+  },
+  "social": [
+    {
+      "label": "哔哩哔哩",
+      "url": "https://b23.tv/mH7WW6t"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/GZ-920"
+    }
+  ],
+  "admin": {
+    "githubOwner": "GZ-920",
+    "githubRepo": "Blog",
+    "githubBranch": "main",
+    "password": "0786"
+  }
+}
