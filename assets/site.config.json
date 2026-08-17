@@ -55,56 +55,56 @@
       "interval": 3000,
       "images": [
         {
-          "src": "https://i0.hdslb.com/bfs/openplatform/d3ca0d03290c9945ae7e7871f7db8dd177c3b3d0.jpg",
-          "color": "#ccc7d7"
+          "src": "https://esaimg.cdn1.vip/i/6a82dd9edc7de_1786961310.webp",
+          "color": "#6e86a8"
         },
         {
-          "src": "https://i0.hdslb.com/bfs/openplatform/1854100e52c2360b2c68adc83dfc8470f2a32b63.jpg",
-          "color": "#97c5c5"
+          "src": "https://esaimg.cdn1.vip/i/6a82dd4173f8f_1786961217.webp",
+          "color": "#6591b4"
         },
         {
-          "src": "https://i0.hdslb.com/bfs/openplatform/ac062902d209718fc5254c2ebb4390a617c91aea.jpg",
-          "color": "#a982b2"
+          "src": "https://esaimg.cdn1.vip/i/6a82dd978ca70_1786961303.webp",
+          "color": "#819c7f"
         },
         {
-          "src": "https://i0.hdslb.com/bfs/openplatform/cc0d04e3ca5dcdfcc064159d776c3add7aeee05a.jpg",
-          "color": "#9fb4b2"
+          "src": "https://esaimg.cdn1.vip/i/6a82dd9973cdd_1786961305.webp",
+          "color": "#899789"
         },
         {
-          "src": "https://i0.hdslb.com/bfs/openplatform/f1b38f67474128ab4982aef19e209530faa0ceab.jpg",
-          "color": "#937ea4"
+          "src": "https://esaimg.cdn1.vip/i/6a82dd9ad6bfd_1786961306.webp",
+          "color": "#e5ccdc"
         },
         {
-          "src": "https://i0.hdslb.com/bfs/openplatform/89b8f95c62c1be844894f1e398d24cd9be9d2b46.png",
+          "src": "https://esaimg.cdn1.vip/i/6a82dda10c095_1786961313.webp",
+          "color": "#9992a5"
+        },
+        {
+          "src": "https://esaimg.cdn1.vip/i/6a82dda453150_1786961316.webp",
           "color": "#a9cde0"
         },
         {
-          "src": "https://i0.hdslb.com/bfs/openplatform/0e27ff0647077a403fa44fa4c3e46dee10e8e424.jpg",
-          "color": "#9891a5"
+          "src": "https://esaimg.cdn1.vip/i/6a82dda5ba255_1786961317.webp",
+          "color": "#937ea5"
         },
         {
-          "src": "https://i0.hdslb.com/bfs/openplatform/c9ccdde271690dbe7c7e0b4b9be15fb51c4be27d.jpg",
-          "color": "#9b98ab"
+          "src": "https://esaimg.cdn1.vip/i/6a82ddaf2f72e_1786961327.webp",
+          "color": "#9fb4b2"
         },
         {
-          "src": "https://i0.hdslb.com/bfs/openplatform/b6a062616d5757b3e735a1dc31fd1e2ea027149e.jpg",
-          "color": "#e5cbdb"
+          "src": "https://esaimg.cdn1.vip/i/6a82ddb08b1ef_1786961328.webp",
+          "color": "#a982b3"
         },
         {
-          "src": "https://i0.hdslb.com/bfs/openplatform/3b54f4a3c1d2e2e7026cad342e0b0f43e976fc0e.jpg",
-          "color": "#899788"
+          "src": "https://esaimg.cdn1.vip/i/6a82ddb171941_1786961329.webp",
+          "color": "#98c5c5"
         },
         {
-          "src": "https://i0.hdslb.com/bfs/openplatform/d2095ead9c83c1c5408b812b2ad8ea0eff213ac4.jpg",
-          "color": "#819b7f"
+          "src": "https://esaimg.cdn1.vip/i/6a82dea81a4bf_1786961576.webp",
+          "color": "#cdc7d7"
         },
         {
-          "src": "https://i0.hdslb.com/bfs/openplatform/89b8f95c62c1be844894f1e398d24cd9be9d2b46.png",
-          "color": "#6591b3"
-        },
-        {
-          "src": "https://i0.hdslb.com/bfs/openplatform/8ede139b350ef142cd5aae3b6e7e3fec799e211f.png",
-          "color": "#6e86a8"
+          "src": "images/head01.jpeg",
+          "color": "#9c98ab"
         }
       ]
     }
