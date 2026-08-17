@@ -27,7 +27,7 @@
     "enabled": true,
     "variant": "danger",
     "showClose": false,
-    "label": "test",
+    "label": "公告qqqqq",
     "title": "欢迎访问初源博文",
     "message": "感谢你的到来。这里会陆续分享创作、技术折腾与日常思考，欢迎在评论区交流。",
     "link": "",
@@ -55,8 +55,64 @@
       "interval": 3000,
       "images": [
         {
+          "src": "images/background.jpeg",
+          "color": "#c0a089"
+        },
+        {
+          "src": "images/cover01.jpeg",
+          "color": "#c0a089"
+        },
+        {
           "src": "https://s41.ax1x.com/2026/08/17/pmjnd76.png",
           "color": "#c0a089"
+        },
+        {
+          "src": "https://s41.ax1x.com/2026/08/17/pmjna0x.jpg",
+          "color": "#c0a089"
+        },
+        {
+          "src": "https://s41.ax1x.com/2026/08/17/pmjnRBt.jpg",
+          "color": "#c0a089"
+        },
+        {
+          "src": "https://s41.ax1x.com/2026/08/17/pmjn0AK.jpg",
+          "color": "#c0a089"
+        },
+        {
+          "src": "https://s41.ax1x.com/2026/08/17/pmjntXR.jpg",
+          "color": "#c0a089"
+        },
+        {
+          "src": "https://s41.ax1x.com/2026/08/17/pmjnUn1.jpg",
+          "color": "#c0a089"
+        },
+        {
+          "src": "https://s41.ax1x.com/2026/08/17/pmjnBtO.jpg",
+          "color": "#c0a089"
+        },
+        {
+          "src": "https://s41.ax1x.com/2026/08/17/pmjn6cd.png",
+          "color": "#c0a089"
+        },
+        {
+          "src": "https://s41.ax1x.com/2026/08/17/pmjnDhD.jpg",
+          "color": "#c0a089"
+        },
+        {
+          "src": "https://s41.ax1x.com/2026/08/17/pmjns9e.jpg",
+          "color": "#c0a089"
+        },
+        {
+          "src": "https://s41.ax1x.com/2026/08/17/pmjny1H.jpg",
+          "color": "#c0a089"
+        },
+        {
+          "src": "https://s41.ax1x.com/2026/08/17/pmjncjA.jpg",
+          "color": "#c0a089"
+        },
+        {
+          "src": "images/head01.jpeg",
+          "color": "#6591b4"
         }
       ]
     }
