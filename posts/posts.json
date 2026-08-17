@@ -8,7 +8,11 @@
     "desc": "",
     "date": "2026-08-02",
     "time": "2 min",
-    "cover": "images/cover01.jpeg",
+    "coverHome": "images/cover---01.jpeg",
+    "coverArticle": "images/head---01.jpeg",
+    "cover": "https://esaimg.cdn1.vip/i/6a82dda10c095_1786961313.webp",
+    "coverColorHome": "#9c98ab",
+    "coverColorArticle": "#9c98ab",
     "featured": true,
     "tags": [
       "高精度中字嵌字",
