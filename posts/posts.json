@@ -1,5 +1,25 @@
 [
   {
+    "file": "新曲-驱魔",
+    "cat": "essay",
+    "category": "动态",
+    "log": "POST",
+    "title": "新视频《驱魔》(与咕咕札合作) 已经上线！",
+    "desc": "",
+    "date": "2026-08-21",
+    "time": "1 min",
+    "coverHome": "images/cover-----01.png",
+    "coverArticle": "https://esaimg.cdn1.vip/i/6a8819a64e596_1787304358.webp",
+    "cover": "https://esaimg.cdn1.vip/i/6a8819a64e596_1787304358.webp",
+    "coverColorHome": "#924554",
+    "coverColorArticle": "#c0a089",
+    "featured": false,
+    "tags": [
+      "驱魔",
+      "高精度中字嵌字"
+    ]
+  },
+  {
     "file": "「高精度中字嵌字」简要制作思路以及方法要点",
     "cat": "music",
     "category": "高精度中字嵌字",
