@@ -1,5 +1,25 @@
 [
   {
+    "file": "AI助力嵌字效率提升",
+    "cat": "music",
+    "category": "高精度中字嵌字",
+    "log": "POST",
+    "title": "AI助力嵌字效率提升",
+    "desc": "",
+    "date": "2026-08-21",
+    "time": "2 min",
+    "coverHome": "images/cover-ai--01.jpeg",
+    "coverArticle": "images/head-ai--01.jpeg",
+    "cover": "https://esaimg.cdn1.vip/i/6a8835a70e170_1787311527.webp",
+    "coverColorHome": "#495795",
+    "coverColorArticle": "#495795",
+    "featured": false,
+    "tags": [
+      "AI",
+      "高精度中字嵌字"
+    ]
+  },
+  {
     "file": "新曲-驱魔",
     "cat": "essay",
     "category": "动态",
