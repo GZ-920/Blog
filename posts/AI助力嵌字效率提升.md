@@ -8,6 +8,7 @@
 接着导出序列帧
 ![](https://esaimg.cdn1.vip/i/6a882ab6998c2_1787308726.webp)
 
+### 第二步：交给AI处理序列帧
 解压后会得到如下文件夹，我们把图片每20张20张发送给豆包
 ![](https://esaimg.cdn1.vip/i/6a882ac24a555_1787308738.webp)
 ``` text
@@ -22,6 +23,7 @@
 > （其实你也可以去下面的网站手动调整顺序）
 ![](https://esaimg.cdn1.vip/i/6a882d6d1e3de_1787309421.webp)
 
+### 第三步：将处理好的序列帧转换为方便制作动画的PSD
 访问网站 [转换.pages.dev](转换.pages.dev)（没错依旧是Cloudflare免费中文域名）
 ![](https://esaimg.cdn1.vip/i/6a882f8172452_1787309953.webp)
 
