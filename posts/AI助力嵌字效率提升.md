@@ -24,7 +24,7 @@
 ![](https://esaimg.cdn1.vip/i/6a882d6d1e3de_1787309421.webp)
 
 ### 第三步：将处理好的序列帧转换为方便制作动画的PSD
-访问网站 [转换.pages.dev](转换.pages.dev)（没错依旧是Cloudflare免费中文域名）
+访问网站 [转换.pages.dev](https://转换.pages.dev/)（没错依旧是Cloudflare免费中文域名）
 ![](https://esaimg.cdn1.vip/i/6a882f8172452_1787309953.webp)
 
 全部上传图片并点击`导出为PSD文件`，下载到本地后分享到Procreate/画世界Pro/Photoshop等软件，手动抠图后导出**动画HEVC**即可
