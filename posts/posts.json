@@ -29,10 +29,10 @@
     "date": "2026-08-21",
     "time": "1 min",
     "coverHome": "images/cover-----01.png",
-    "coverArticle": "https://esaimg.cdn1.vip/i/6a8819a64e596_1787304358.webp",
-    "cover": "https://esaimg.cdn1.vip/i/6a8819a64e596_1787304358.webp",
+    "coverArticle": "images/head-----01.png",
+    "cover": "images/cover-----01.png",
     "coverColorHome": "#924554",
-    "coverColorArticle": "#c0a089",
+    "coverColorArticle": "#924554",
     "featured": false,
     "tags": [
       "驱魔",
